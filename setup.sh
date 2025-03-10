@@ -49,8 +49,7 @@ function setup_brew_apps() {
   brew install --cask docker
 
   # Security
-  brew install --cask angry-ip-scanner
-  brew install k6
+  brew install k6 nmap
 
   # Other
   brew install dockutil git-gui go
