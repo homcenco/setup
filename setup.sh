@@ -49,7 +49,7 @@ function setup_brew_apps() {
   brew install --cask docker
 
   # Security
-  brew install k6 nmap
+  brew install k6 nmap exploitdb
 
   # Other
   brew install dockutil git-gui go
