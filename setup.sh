@@ -35,7 +35,7 @@ function setup_brew() {
 function setup_brew_apps() {
   step "Setting brew applications!" "${1}" "${2}"
   # Browser apps
-  brew install --cask google-chrome yandex firefox opera surfshark
+  brew install --cask google-chrome surfshark
   # File apps
   brew install --cask transmit folx
   # Background apps
@@ -43,13 +43,13 @@ function setup_brew_apps() {
   # Chatting apps
   brew install --cask telegram discord
   # Development apps
-  brew install --cask webstorm pycharm visual-studio-code figma bruno termius
+  brew install --cask webstorm visual-studio-code figma bruno termius
 
   # Docker
   brew install --cask docker
 
   # Security
-  brew install k6 nmap exploitdb
+  brew install k6 nmap
 
   # Other
   brew install dockutil git-gui go
@@ -105,7 +105,7 @@ function setup_php_env() {
   alert "Rebuild composer non-political:"
   local COMPOSER_TEMP="${HOME}/composer-build"
   [ -d "${COMPOSER_TEMP}" ] && rm -rf "${COMPOSER_TEMP}"
-  git clone https://github.com/composer/composer.git --branch 2.8.6  "${COMPOSER_TEMP}" && \
+  git clone https://github.com/composer/composer.git --branch 2.8.9  "${COMPOSER_TEMP}" && \
       composer install -o -d "${COMPOSER_TEMP}" && \
       wget https://raw.githubusercontent.com/politsin/snipets/master/patch/composer.patch -q -O "${COMPOSER_TEMP}/composer.patch"  && \
       cd "${COMPOSER_TEMP}" && patch -p1 < composer.patch && \

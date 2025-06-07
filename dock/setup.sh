@@ -4,10 +4,9 @@ set -u
 # Settings variables
 # APPS array by its name (ex: "App Store".app)
 APPS=("Launchpad"
-      "Google Chrome" "Safari" "Yandex" "Opera" "Firefox" "Surfshark"
-      "Discord" "Mail" "Telegram"
-      "Figma" "Freeform"
-      "Bruno" "Transmit" "Visual Studio Code" "PyCharm" "WebStorm" "Docker"
+      "Google Chrome" "Safari" "Surfshark"
+      "Discord" "Mail" "Telegram" "Figma"
+      "Bruno" "Transmit" "Visual Studio Code" "WebStorm" "Docker"
       "Termius" "iTerm" "Activity Monitor" "Screenshot"  "Reminders" "Calculator" "System Settings"
 )
 # FOLDERS array by its path name and view (ex: "$HOME/Documents" "Documents" "list")
