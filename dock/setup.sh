@@ -6,7 +6,7 @@ set -u
 APPS=("Launchpad"
       "Google Chrome" "Safari" "Surfshark"
       "Discord" "Mail" "Telegram" "Figma"
-      "Bruno" "Transmit" "Visual Studio Code" "WebStorm" "Cursor" "Windsurf" "Docker"
+      "Bruno" "Transmit" "Visual Studio Code" "WebStorm" "Windsurf" "Docker"
       "Termius" "iTerm" "Activity Monitor" "Screenshot"  "Reminders" "Calculator" "System Settings"
 )
 # FOLDERS array by its path name and view (ex: "$HOME/Documents" "Documents" "list")
