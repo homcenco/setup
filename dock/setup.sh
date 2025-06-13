@@ -6,7 +6,7 @@ set -u
 APPS=("Launchpad"
       "Google Chrome" "Safari" "Surfshark"
       "Discord" "Mail" "Telegram" "Figma"
-      "Bruno" "Transmit" "Visual Studio Code" "WebStorm" "Docker"
+      "Bruno" "Transmit" "Visual Studio Code" "WebStorm" "Cursor" "Windsurf" "Docker"
       "Termius" "iTerm" "Activity Monitor" "Screenshot"  "Reminders" "Calculator" "System Settings"
 )
 # FOLDERS array by its path name and view (ex: "$HOME/Documents" "Documents" "list")
@@ -14,6 +14,7 @@ FOLDERS=("('$HOME/Documents' 'Documents' 'list')"
          "('$HOME/Downloads' 'Downloads' 'list')"
          "('/Applications/Utilities' 'Utilities' 'list')"
          "('$HOME/Web' 'Web' 'list')"
+         "('$HOME/Work' 'Work' 'list')"
 )
 
 # Color variables
