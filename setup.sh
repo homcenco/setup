@@ -46,7 +46,7 @@ function setup_brew_apps() {
   brew install --cask webstorm visual-studio-code figma bruno termius windsurf
 
   # Docker
-  brew install --cask docker
+  brew install --cask docker-desktop
 
   # Security
   brew install k6 nmap
