@@ -35,7 +35,7 @@ function setup_brew() {
 function setup_brew_apps() {
   step "Setting brew applications!" "${1}" "${2}"
   # Browser apps
-  brew install --cask google-chrome surfshark
+  brew install --cask google-chrome
   # File apps
   brew install --cask transmit folx
   # Background apps
@@ -43,7 +43,7 @@ function setup_brew_apps() {
   # Chatting apps
   brew install --cask telegram discord
   # Development apps
-  brew install --cask webstorm visual-studio-code figma bruno termius windsurf
+  brew install --cask webstorm visual-studio-code figma bruno termius
 
   # Docker
   brew install --cask docker-desktop
