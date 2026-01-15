@@ -39,7 +39,7 @@ function setup_brew_apps() {
   # File apps
   brew install --cask transmit folx
   # Background apps
-  brew install --cask contexts macs-fan-control rectangle-pro alt-tab
+  brew install --cask contexts macs-fan-control rectangle-pro alt-tab anaconda vlc
   # Chatting apps
   brew install --cask telegram discord
   # Development apps
@@ -111,7 +111,7 @@ function setup_php_env() {
   alert "Rebuild composer non-political:"
   local COMPOSER_TEMP="${HOME}/composer-build"
   [ -d "${COMPOSER_TEMP}" ] && rm -rf "${COMPOSER_TEMP}"
-  git clone https://github.com/composer/composer.git --branch 2.8.10  "${COMPOSER_TEMP}" && \
+  git clone https://github.com/composer/composer.git --branch 2.9.3  "${COMPOSER_TEMP}" && \
       composer install -o -d "${COMPOSER_TEMP}" && \
       wget https://raw.githubusercontent.com/politsin/snipets/master/patch/composer.patch -q -O "${COMPOSER_TEMP}/composer.patch"  && \
       cd "${COMPOSER_TEMP}" && patch -p1 < composer.patch && \
