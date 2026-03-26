@@ -5,16 +5,14 @@ set -u
 # APPS array by its name (ex: "App Store".app)
 APPS=("Launchpad"
       "Google Chrome" "Safari"
-      "Discord" "Mail" "Telegram" "Tiger.com" "Figma"
-      "Bruno" "Transmit" "Visual Studio Code" "PyCharm" "WebStorm" "Android Studio" "Xcode" "Docker"
+      "Discord" "Mail" "Telegram" "Vataga.terminal" "Tiger.com" "Figma"
+      "Bruno" "Transmit" "Visual Studio Code" "WebStorm" "Cursor" "Android Studio" "Xcode" "Docker"
       "Termius" "iTerm" "Activity Monitor" "Screenshot"  "Reminders" "Calculator" "System Settings"
 )
 # FOLDERS array by its path name and view (ex: "$HOME/Documents" "Documents" "list")
 FOLDERS=("('$HOME/Documents' 'Documents' 'list')"
          "('$HOME/Downloads' 'Downloads' 'list')"
          "('/Applications/Utilities' 'Utilities' 'list')"
-         "('$HOME/Web' 'Web' 'list')"
-         "('$HOME/Work' 'Work' 'list')"
 )
 
 # Color variables
