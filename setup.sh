@@ -78,8 +78,8 @@ function setup_nodejs_env() {
 
   alert "Install node & npm 20:"
   source "$HOME/.zprofile"
-  nvm install 20
-  nvm alias default 20
+  nvm install 24
+  nvm alias default 24
   nvm use default
 
   alert "Install bun:"
