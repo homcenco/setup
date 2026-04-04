@@ -43,7 +43,7 @@ function setup_brew_apps() {
   # Chatting apps
   brew install --cask telegram discord
   # Development apps
-  brew install --cask webstorm cursor visual-studio-code figma bruno termius
+  brew install --cask webstorm cursor visual-studio-code figma bruno termius windsurf
 
   # Docker
   brew install --cask docker-desktop
@@ -76,7 +76,7 @@ function setup_nodejs_env() {
   alert "Installing nvm:"
   brew install nvm
 
-  alert "Install node & npm 20:"
+  alert "Install node & npm 24"
   source "$HOME/.zprofile"
   nvm install 24
   nvm alias default 24
