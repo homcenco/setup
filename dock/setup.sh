@@ -108,6 +108,8 @@ function dockutil_add_app(){
         # options: PATH LABEL POSITION
         dockutil --add "${APP}" --label "${LABEL}" --position "${2}" --no-restart &> /dev/null
         echo -e "App added: ${1} (\"${APP}\")"
+    if [ "$(sw_vers -productVersion | cut -d. -f1)" -lt 26 ] && [ "$1" == "Xcode" ]; then
+        alert "App was skipped: ${1}, macoS is $(sw_vers -productVersion | cut -d. -f1) < 26"
     else
         error "App not exists: ${1} (\"${APP}\")"
     fi
