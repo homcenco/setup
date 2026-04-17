@@ -109,9 +109,8 @@ function dockutil_add_app(){
         dockutil --add "${APP}" --label "${LABEL}" --position "${2}" --no-restart &> /dev/null
         echo -e "App added: ${1} (\"${APP}\")"
     else
-        # Check if it's Xcode on an older macOS (using 16 as the realistic threshold)
-        if [ "$(sw_vers -productVersion | cut -d. -f1)" -lt 16 ] && [ "$1" == "Xcode" ]; then
-            alert "App was skipped: ${1}, macOS is $(sw_vers -productVersion | cut -d. -f1) < 16"
+        if [ "$(sw_vers -productVersion | cut -d. -f1)" -lt 26 ] && [ "$1" == "Xcode" ]; then
+            alert "App was skipped: ${1}, macOS is $(sw_vers -productVersion | cut -d. -f1) < 26"
         else
             error "App not exists: ${1} (\"${APP}\")"
         fi
