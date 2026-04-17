@@ -24,7 +24,7 @@ _ALIASES_DIR="$HOME/.config/aliases"
 [ -f "$HOME/.bash_profile" ] && source "$HOME"/.bash_profile
 
 # If $HOME/.mempalace directory exists - add it to export
-[ -d "$HOME/.mempalace" ] && export MEMPALACE_DIR="~/.mempalace"
+[ -d "$HOME/.mempalace" ] && export MEMPALACE_DIR="~/.mempalace/palace"
 
 # Add NVM_DIR variable and nvm command to export
 export NVM_DIR="$HOME/.nvm" && [ -s "/usr/local/opt/nvm/nvm.sh" ] && \. "/usr/local/opt/nvm/nvm.sh"
