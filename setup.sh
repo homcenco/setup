@@ -36,26 +36,24 @@ function setup_brew_apps() {
   step "Setting brew applications!" "${1}" "${2}"
   # Browser apps
   brew install --cask google-chrome
-  # File apps
-  brew install --cask transmit folx
   # Background apps
-  brew install --cask contexts macs-fan-control rectangle-pro alt-tab vlc
+  brew install --cask macs-fan-control rectangle-pro alt-tab vlc
   # Chatting apps
   brew install --cask telegram discord
   # Development apps
-  brew install --cask webstorm cursor visual-studio-code figma bruno termius windsurf
+  brew install --cask webstorm visual-studio-code figma bruno termius claude-code
 
   # Docker
   brew install --cask docker-desktop
 
   # Security
-  brew install k6 nmap
+  #brew install k6 nmap
 
   # App development
-  brew install flutter android-studio cocoapods
-  pod setup
-  flutter doctor --android-licenses
-  flutter doctor
+  #brew install flutter android-studio cocoapods
+  #pod setup
+  #flutter doctor --android-licenses
+  #flutter doctor
 
   # Other
   brew install dockutil git-gui go
@@ -97,32 +95,6 @@ function setup_nodejs_env() {
   echo "npx --no-install commitlint --edit" >> "${HOME}/.git/hooks/commit-msg"
   chmod a+x "${HOME}/.git/hooks/commit-msg"
   git config --global core.hooksPath "${HOME}/.git/hooks"
-}
-
-# Setup php environment
-function setup_php_env() {
-  step "Setting php environment!" "${1}" "${2}"
-  alert "Installing php and apps:"
-  brew install php wrk mailhog phpmyadmin
-  alert "Installing php services:"
-  brew install composer dnsmasq nginx mysql wget
-  alert "Installing ngrok tunnel:"
-  brew install ngrok/ngrok/ngrok
-  alert "Rebuild composer non-political:"
-  local COMPOSER_TEMP="${HOME}/composer-build"
-  [ -d "${COMPOSER_TEMP}" ] && rm -rf "${COMPOSER_TEMP}"
-  git clone https://github.com/composer/composer.git --branch 2.9.5  "${COMPOSER_TEMP}" && \
-      composer install -o -d "${COMPOSER_TEMP}" && \
-      wget https://raw.githubusercontent.com/politsin/snipets/master/patch/composer.patch -q -O "${COMPOSER_TEMP}/composer.patch"  && \
-      cd "${COMPOSER_TEMP}" && patch -p1 < composer.patch && \
-      php -d phar.readonly=0 bin/compile && \
-      rm /usr/local/bin/composer && \
-      php composer.phar install && \
-      php composer.phar update && \
-      mv "${COMPOSER_TEMP}/composer.phar" /usr/local/bin/composer && \
-      rm -rf "${COMPOSER_TEMP}"  && \
-      chmod +x /usr/local/bin/composer && \
-      cd "${HOME}" || exit
 }
 
 # Setup dock applications
