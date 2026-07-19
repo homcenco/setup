@@ -80,9 +80,6 @@ function setup_nodejs_env() {
   nvm alias default 24
   nvm use default
 
-  alert "Install bun:"
-  brew install oven-sh/bun/bun
-
   alert "Installing npm tools global packages:"
   source "$HOME/.zprofile"
   npm i -g autocannon npm-check-updates eslint yarn npm@latest
@@ -112,7 +109,6 @@ function setup_iterm_terminal() {
   step "Setting iterm terminal!" "${1}" "${2}"
   brew install iterm2 zsh
   brew install zsh-completions zsh-autosuggestions powerlevel10k
-  brew install romkatv/gitstatus/gitstatus
   chmod go-w '/usr/local/share'
   chmod -R go-w '/usr/local/share/zsh'
   # shellcheck disable=SC2129
