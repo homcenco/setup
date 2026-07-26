@@ -41,7 +41,7 @@ function setup_brew_apps() {
   # Chatting apps
   brew install --cask telegram discord
   # Development apps
-  brew install --cask webstorm visual-studio-code figma bruno termius claude-code
+  brew install --cask webstorm visual-studio-code bruno termius claude-code
 
   # Docker
   brew install --cask docker-desktop

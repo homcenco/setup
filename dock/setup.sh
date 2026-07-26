@@ -5,7 +5,7 @@ set -u
 # APPS array by its name (ex: "App Store".app)
 APPS=("Launchpad"
       "Google Chrome" "Safari"
-      "Discord" "Mail" "Telegram" "Vataga.terminal" "Tiger.com" "Figma"
+      "Discord" "Mail" "Telegram" "Vataga.terminal" "Tiger.com"
       "Bruno" "Visual Studio Code" "WebStorm" "Docker"
       "Termius" "iTerm" "Activity Monitor" "Screenshot"  "Reminders" "Calculator" "System Settings"
 )
