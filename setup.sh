@@ -58,6 +58,7 @@ function setup_brew_apps() {
   # Other
   brew install dockutil git-gui go
 
+  # Mouse cursor sensitivity setup
   defaults write -g com.apple.mouse.scaling 10
 
   # Copy my `.zprofile` config
