@@ -58,10 +58,7 @@ function setup_brew_apps() {
   # Other
   brew install dockutil git-gui go
 
-  # Figma disable agent
-  rm -fr "${HOME}/Library/Application Support/Figma/FigmaAgent.app"
-  touch "${HOME}/Library/Application Support/Figma/FigmaAgent.app"
-  sudo chflags -R schg "${HOME}/Library/Application Support/Figma/FigmaAgent.app"
+  defaults write -g com.apple.mouse.scaling 10
 
   # Copy my `.zprofile` config
   /bin/bash -c "$(curl -fsSL https://raw.githubusercontent.com/homcenco/setup/main/zprofile/setup.sh)"
