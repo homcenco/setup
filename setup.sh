@@ -53,7 +53,7 @@ function setup_brew_apps() {
   #flutter doctor
 
   # Other
-  brew install dockutil git-gui go
+  brew install dockutil git-gui go libpq
 
   # Mouse cursor sensitivity setup
   defaults write -g com.apple.mouse.scaling 10
