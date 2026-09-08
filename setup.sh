@@ -35,13 +35,13 @@ function setup_brew() {
 function setup_brew_apps() {
   step "Setting brew applications!" "${1}" "${2}"
   # Browser apps
-  brew install --cask google-chrome
+  brew install --cask google-chrome --no-ask
   # Background apps
-  brew install --cask macs-fan-control rectangle-pro vlc
+  brew install --cask macs-fan-control rectangle-pro vlc --no-ask
   # Chatting apps
-  brew install --cask telegram discord
+  brew install --cask telegram discord --no-ask
   # Development apps
-  brew install --cask webstorm visual-studio-code termius docker-desktop
+  brew install --cask webstorm visual-studio-code termius docker-desktop --no-ask
 
   # Security
   #brew install k6 nmap
@@ -53,7 +53,7 @@ function setup_brew_apps() {
   #flutter doctor
 
   # Other
-  brew install dockutil git-gui go libpq
+  brew install dockutil git-gui go libpq --no-ask
 
   # Mouse cursor sensitivity setup
   defaults write -g com.apple.mouse.scaling 10
@@ -67,7 +67,7 @@ function setup_brew_apps() {
 function setup_nodejs_env() {
   step "Setting Nodejs environment!" "${1}" "${2}"
   alert "Installing nvm:"
-  brew install nvm
+  brew install nvm --no-ask
 
   alert "Install node & npm 24"
   source "$HOME/.zprofile"
@@ -102,8 +102,8 @@ function setup_dock_apps() {
 # Setup iterm terminal
 function setup_iterm_terminal() {
   step "Setting iterm terminal!" "${1}" "${2}"
-  brew install iterm2 zsh
-  brew install zsh-completions zsh-autosuggestions powerlevel10k
+  brew install iterm2 zsh --no-ask
+  brew install zsh-completions zsh-autosuggestions powerlevel10k --no-ask
   chmod go-w '/usr/local/share'
   chmod -R go-w '/usr/local/share/zsh'
   # shellcheck disable=SC2129
