@@ -133,7 +133,7 @@ function update_global() {
 
 function update_brew() {
   success "Starting brew upgrade"
-  brew upgrade && brew upgrade --cask --greedy && brew cleanup
+  brew upgrade -y && brew upgrade --cask --greedy -y && brew cleanup
 }
 
 function update_composer() {
