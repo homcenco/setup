@@ -37,7 +37,7 @@ function setup_brew_apps() {
   # Browser apps
   brew install --cask google-chrome --no-ask
   # Background apps
-  brew install --cask macs-fan-control rectangle-pro vlc --no-ask
+  brew install --cask macs-fan-control rectangle-pro vlc cleanshot --no-ask
   # Chatting apps
   brew install --cask telegram discord --no-ask
   # Development apps
