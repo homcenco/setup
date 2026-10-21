@@ -42,6 +42,8 @@ function setup_brew_apps() {
   brew install --cask telegram discord --no-ask
   # Development apps
   brew install --cask webstorm visual-studio-code termius docker-desktop --no-ask
+  # Trading
+  brew install --cask clash-verge-rev obsidian
 
   # Security
   #brew install k6 nmap
